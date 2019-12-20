@@ -1,7 +1,7 @@
 const view = {
-	displayMessage: function(msg){
-	let messageArea = document.getElementById("controlPanel");
-		messageArea.innerHTML = msg;
+	displayMessage: function(msg) {
+		let messageArea = document.getElementById("controlPanel");
+			messageArea.innerHTML = msg;
 	},
 	displayHit: function(location) {
 		let cell = document.getElementById(location);
@@ -11,21 +11,19 @@ const view = {
 		let cell = document.getElementById(location);
 		cell.setAttribute ("class", "miss");
 	}
-	};
-
+};
 const model = {
 	boardSize: 7,
 	numShips: 3,
 	shipsSunk: 0,
 	shipLength: 3,
 	ships: [ 
-			{ locations:[0, 0, 0], hits:["","",""] },
-			{ locations:[0, 0, 0], hits:["","",""] },
-			{ locations:[0, 0, 0], hits:["","",""] } 
+		{ locations:[0, 0, 0], hits:["","",""] },
+		{ locations:[0, 0, 0], hits:["","",""] },
+		{ locations:[0, 0, 0], hits:["","",""] } 
 			],
 
 	fire: function(guess) {
-
 		for (let i = 0; i < this.numShips; i++){
 			let ship = this.ships[i];
 			let index = ship.locations.indexOf(guess);
@@ -90,8 +88,6 @@ const model = {
 		return newShipLocations;
 		},
 
-		
-
 	collision: function(locations) {
 		for (var i = 0; i < this.numShips; i++) {
 			var ship = model.ships[i];
@@ -103,20 +99,18 @@ const model = {
 		}
 		return false;
 		},
-		};
-
-
+	};
 
 	function parseGuess (guess) {
-		var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
+		let alphabet = ["A", "B", "C", "D", "E", "F", "G"];
 
 		if (guess === null || guess.length !== 2) {
 			alert("Oops, please enter a letter and a number on the board.");
 
 		} else {
 			firstChar = guess.charAt (0);
-			var row = alphabet.indexOf(firstChar);
-			var column = guess.charAt(1);
+			let row = alphabet.indexOf(firstChar);
+			let column = guess.charAt(1);
 
 			if (isNaN(row)||isNaN(column)) {
 				alert ("Oops, that isn't on the board!");
@@ -128,7 +122,7 @@ const model = {
 		}
 		return null;
 
-		};
+	};
 
 	let controller = {
 		guesses: 0,
@@ -144,7 +138,7 @@ const model = {
 				}
 			}	
 		}
-		};
+	};
 
 window.onload = init;
 function init() {
@@ -153,23 +147,17 @@ function init() {
 	let guessInput = document.getElementById("guessInput");
 	guessInput.onkeypress = handleKeyPress;
 	model.generateShipLocations();
-	};
-
-
+};
 function handleFireButton() {
 	let guessInput = document.getElementById("guessInput");
 	let guess = guessInput.value;
 	controller.processGuess(guess);
 	guessInput.value = "";
-	};
-
+};
 function handleKeyPress(e) {
 	let fireButton = document.getElementById("fireButton");
 	if (e.keyCode === 13) {
 		fireButton.click();
 		return false;
 	}
-	};
-
-
-	
+};
