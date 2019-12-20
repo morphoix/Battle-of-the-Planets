@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang ="en">
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    	<meta name="description" content="My 1st PC game for browsers made with a simple java script code. Somewhere in space..." />
+    	<meta name="keywords" content="web development, canvas, java script, game, battle, spacebattle, space" />
+    	<meta name="author" content="Lera Bolonicheva">
+		<title>Play</title>
+		<meta property="og:type" content="website">
+    	<meta property="og:title" content="Battle of the planets">
+    	<meta property="og:description" content="Somewhere in space...">
+    	<meta property="og:url" content="http://lerabolonicheva.ru">
+    	<meta property="og:site_name" content="IMAGO Play">
+    	<meta property="og:image" content="https://cp-hosting.jino.ru/management/filemanager/files/domains/lerabolonicheva.ru/play/gforce.jpg">
+    	<meta property="og:image:type" content="image/jpeg">
+    	<meta name="og:email" content="lerabolonicheva@gmail.com">
+		
+		<link rel="stylesheet" type="text/css" href="battle.css">
+		<link rel="stylesheet" media="only screen and (max-width: 1100px)" href="battleMin.css">
+		<link rel="stylesheet" media="only screen and (orientation: portrait)" href="battleRev.css">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	</head>
+	<body>
+	    <div id="audio">
+    		<audio autoplay loop>
+    			<source src="1.ogg" type="audio/ogg; codecs=vorbis">
+    	    	<source src="1.mp3" type="audio/mpeg">
+    		</audio>
+            </div>
+		<h1>b<span>A</span>ttle</h1>
+		<h2>of the  plAnets</h2>
+
+		<canvas id="canvas"></canvas>
+		<script src="canvasBattle.js"></script>
+		<div id="logo"></div>
+			<table>
+				<tr id="name">
+					<td></td>
+					<td>0</td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td id="number">A</td>
+					<td id="00"></td>
+					<td id="01"></td>
+					<td id="02"></td>
+					<td id="03"></td>
+					<td id="04"></td>
+					<td id="05"></td>
+					<td id="06"></td>
+				</tr>
+				<tr>
+					<td id="number">B</td>
+					<td id="10"></td>
+					<td id="11"></td>
+					<td id="12"></td>
+					<td id="13"></td>
+					<td id="14"></td>
+					<td id="15"></td>
+					<td id="16"></td>
+				</tr>
+				<tr>
+					<td id="number">C</td>
+					<td id="20"></td>
+					<td id="21"></td>
+					<td id="22"></td>
+					<td id="23"></td>
+					<td id="24"></td>
+					<td id="25"></td>
+					<td id="26"></td>
+				</tr>
+				<tr>
+					<td id="number">D</td>
+					<td id="30"></td>
+					<td id="31"></td>
+					<td id="32"></td>
+					<td id="33"></td>
+					<td id="34"></td>
+					<td id="35"></td>
+					<td id="36"></td>
+				</tr>
+				<tr>
+					<td id="number">E</td>
+					<td id="40"></td>
+					<td id="41"></td>
+					<td id="42"></td>
+					<td id="43"></td>
+					<td id="44"></td>
+					<td id="45"></td>
+					<td id="46"></td>
+				</tr>
+				<tr>
+					<td id="number">F</td>
+					<td id="50"></td>
+					<td id="51"></td>
+					<td id="52"></td>
+					<td id="53"></td>
+					<td id="54"></td>
+					<td id="55"></td>
+					<td id="56"></td>
+				</tr>
+				<tr>
+					<td id="number">G</td>
+					<td id="60"></td>
+					<td id="61"></td>
+					<td id="62"></td>
+					<td id="63"></td>
+					<td id="64"></td>
+					<td id="65"></td>
+					<td id="66"></td>
+				</tr>
+			</table>
+			<form>
+					<input type="text" id="guessInput" placeholder="A0" autofocus="">
+					<input type="button" class="b1" id="fireButton" value="ATTACK!">
+			</form>
+			<div id="controlPanel">Destroy <b><sup>3</sup></b> rocket bases otherwise Zoltar will win!<br>
+			There are <b><sup> 9 </sup></b> rockets on the field.<br> Go, G-Force!!!</div>
+
+		<footer>
+		  	<div class="container">
+		    	<a class='logo' href='http://http://imagospace.net/imago.html' rel='home'>imAGo spAce</a>
+		    	<a class='copy' >&copy;lerabolonicheva 2019</a>
+		  	</div>
+		</footer>
+		<script src="spacebattle.js"></script>
+	</body>
+</html>
